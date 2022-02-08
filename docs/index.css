@@ -22,10 +22,10 @@ html {
   }
   /*==== 로고 ====*/
   .logo-move{
-    animation:move .7s linear 0s infinite alternate;;
+    animation:logo_move .7s linear 0s infinite alternate;;
   }
   
-  @keyframes move {
+  @keyframes logo_move {
     0% {margin-top: 0px;} 
     100% {margin-top: 10px;} 
   }
