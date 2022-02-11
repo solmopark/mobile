@@ -178,3 +178,24 @@ html {
       stroke: rgba(64,64,64,0);
     }
   }
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #fcc21b #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #fcc21b;
+    border-radius: 10px;
+    border: 3px outset #ffffff;
+  }
