@@ -98,10 +98,10 @@ html {
   }
   /*==== 레시피&검색 ====*/
   .p-cook__s{
-    animation:cook 2s linear infinite alternate;
+    animation:p-cook__s 2s linear infinite alternate;
   }
   
-  @keyframes cook{
+  @keyframes p-cook__s{
     0%{transform:rotate(0deg) translate(0,80px);}
     100%{transform:rotate(120deg) translate(50px,0px);}
   }
@@ -124,11 +124,11 @@ html {
   }
   
   .p-cook__b{
-    animation:up-down 0.8s linear infinite alternate;
+    animation:p-cook__b 0.8s linear infinite alternate;
     transform-origin: 50% 50%;
   }
   
-  @keyframes up-down{
+  @keyframes p-cook__b{
      0% {margin-top: 0px; }
     100%{transform:rotate(360deg);
       margin-top: 40px;}
