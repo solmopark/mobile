@@ -148,7 +148,29 @@ html {
   .p-cook__t.trouble{
     animation-delay:0.2s;
   } 
-  
+  /*==== 쇼핑 ====*/
+  .shop__s {
+    animation:p-my__st 5s linear infinite alternate running
+    }
+    
+  @keyframes p-my__st{
+      0%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} 
+      40%{transform:translate(150px, 20px) scale(1,1) rotate(180deg);} 
+      70%{transform:translate(50px,70px) scale(0.7,0.7) rotate(270deg);} 
+      100%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} }
+    
+    
+  .shop__t {
+    animation:p-my__ts 5s linear infinite alternate running
+    }
+    
+  @keyframes p-my__ts {
+      0%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} 
+      40%{transform:translate(20px, 150px) scale(1,1) rotate(180deg);} 
+      70%{transform:translate(70px,50px) scale(0.7,0.7) rotate(270deg);} 
+      100%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} }
+    
+
   /*==== 커뮤 ====*/
   .commu_ani{
     animation:commu_ani 5s linear infinite alternate running;
