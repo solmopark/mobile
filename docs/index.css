@@ -96,7 +96,58 @@ html {
     0%{background-position:center;}
     100% {background-position:-8000% center;}
   }
+  /*==== 레시피&검색 ====*/
+  .p-cook__s{
+    animation:cook 2s linear infinite alternate;
+  }
   
+  @keyframes cook{
+    0%{transform:rotate(0deg) translate(0,80px);}
+    100%{transform:rotate(120deg) translate(50px,0px);}
+  }
+  
+  .p-cook__s.ster-1{
+    animation-delay:0.2s;
+  }
+  
+  .p-cook__star{
+    animation:rotate_s 2s linear infinite alternate;
+  }
+  
+  @keyframes rotate_s{
+    0%{transform:rotate(120deg) translate(50px,0px);}
+    100%{transform:rotate(0deg) translate(0px,80px);}
+  }
+  
+  .p-cook__star.ster-1{
+    animation-delay:0.3s;
+  }
+  
+  .p-cook__b{
+    animation:up-down 0.8s linear infinite alternate;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes up-down{
+     0% {margin-top: 0px; }
+    100%{transform:rotate(360deg);
+      margin-top: 40px;}
+  }
+  
+  
+  .p-cook__t{
+    animation:trouble .9s ease-in infinite alternate;
+    transform-origin:50% 50%;
+  }
+  
+  @keyframes trouble{
+    0%{transform:scale(0.5);}
+    100% {transform:scale(1.5);}
+  }
+  
+  .p-cook__t.trouble{
+    animation-delay:0.2s;
+  } 
   
   /*==== 커뮤 ====*/
   .commu_ani{
