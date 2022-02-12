@@ -1,364 +1,374 @@
 html {
-    scroll-behavior: smooth;
-    user-select:none;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.con {
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@media (min-width:1900px) {
+  body {
+    overflow-x: hidden;
   }
-  .con {
-    width: 1920px;
-    margin-left: auto;
-    margin-right: auto;	
-  
+}
+
+body {
+  height: 100vh;
+}
+
+html>body .scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+/*==== 라이브러리 ====*/
+:root {
+  --orange: #ffac32;
+  --green: #5a8d26;
+  --blue: #a5d8e5;
+  --black: #404040;
+  --white: #f3f5f8;
+  --animation-speed: 1.4;
+  --interval: var(--animation-speed)/4;
+}
+
+/*==== 로고 ====*/
+.logo-move {
+  animation: logo_move .7s linear 0s infinite alternate;
+  ;
+}
+
+@keyframes logo_move {
+  0% {
+    margin-top: 0px;
   }
-  @media ( min-width:1900px ) {
-    body {
-      overflow-x:hidden;
-    }
+
+  100% {
+    margin-top: 10px;
   }
-  
-  body{
-    height: 100vh;
+}
+
+/*==== 백스토리 ====*/
+.back-story__t {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.back-story__t.t1 {
+  color: var(--orange);
+
+}
+
+.back-story__t.t2 {
+  color: var(--black);
+
+}
+
+/*==== 스타일 ====*/
+.style__line {
+  animation: scale-up-ver-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 2s;
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
   }
-  html > body .scrollbar-thumb {
-    background-color: rgba(150,150,150,0.5);
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
   }
-  /*==== 라이브러리 ====*/
-  :root{
-    --orange: #ffac32;
-    --green: #5a8d26;
-    --blue: #a5d8e5;
-    --black: #404040;
-    --white: #f3f5f8;
-    --animation-speed: 1.4;
-    --interval: var(--animation-speed)/4;
-  }
-  /*==== 로고 ====*/
-  .logo-move{
-    animation:logo_move .7s linear 0s infinite alternate;;
-  }
-  
-  @keyframes logo_move {
-    0% {margin-top: 0px;} 
-    100% {margin-top: 10px;} 
-  }
-  
-  /*==== 백스토리 ====*/
-  .back-story__t{
-    font-size:36px;
-    font-weight:800;
-    letter-spacing:-0.8px;
-  }
-  
-  .back-story__t.t1{
-    color:var(--orange);
-    
-  }
-  
-  .back-story__t.t2{
-    color:var(--black);
-    
-  }
-  
-  /*==== 스타일 ====*/
-  .style__line{
-    animation: scale-up-ver-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation-delay:2s;
-  }
-  
-  @keyframes scale-up-ver-top {
-    0% {
-      transform: scaleY(0.4);
-      transform-origin: 100% 0%;
-    }
-    100% {
-      transform: scaleY(1);
-      transform-origin: 100% 0%;
-    }
-  }
-  
-  /*==== 와이어프레임 ====*/
-  .wireframe{
-    height:1240px;
-  }
-  
-  .wireframe__text{
-    color:var(--black);
-    letter-spacing:-0.4px;
-    opacity:60%;
-  }
-  
-  .wireframe__img{
-    height:1240px;
-    width:1920px;
-    object-fit:contain;
-    background-size: 150%;
-    background-image:url(https://cdn.jsdelivr.net/gh/solmopark/mobile/docs/mobile_img/wireframe.jpg);
-    background-position-x:-253px;
-    background-position-y:-500px;
-    
+}
+
+/*==== 와이어프레임 ====*/
+.wireframe {
+  height: 1240px;
+}
+
+.wireframe__text {
+  color: var(--black);
+  letter-spacing: -0.4px;
+  opacity: 60%;
+}
+
+.wireframe__img {
+  height: 1240px;
+  width: 1920px;
+  object-fit: contain;
+  background-size: 150%;
+  background-image: url(https://cdn.jsdelivr.net/gh/solmopark/mobile/docs/mobile_img/wireframe.jpg);
+  background-position-x: -253px;
+  background-position-y: -500px;
+
   /*  애니메이션  */
-    animation-name:wire;
-    animation-duration:4000s;
-    animation-iteration-count:infinite;
-    animation-timing-function:linear;
-    animation-direction:alternate;
-  }
-  
-  @keyframes wire{
-    0%{background-position:center;}
-    100% {background-position:-8000% center;}
-  }
-  /*==== 레시피&검색 ====*/
-  .p-cook__s{
-    animation:p-cook__s 2s linear infinite alternate;
-  }
-  
-  @keyframes p-cook__s{
-    0%{transform:rotate(0deg) translate(0,80px);}
-    100%{transform:rotate(120deg) translate(50px,0px);}
-  }
-  
-  .p-cook__s.ster-1{
-    animation-delay:0.2s;
-  }
-  
-  .p-cook__star{
-    animation:rotate_s 2s linear infinite alternate;
-  }
-  
-  @keyframes rotate_s{
-    0%{transform:rotate(120deg) translate(50px,0px);}
-    100%{transform:rotate(0deg) translate(0px,80px);}
-  }
-  
-  .p-cook__star.ster-1{
-    animation-delay:0.3s;
-  }
-  
-  .p-cook__b{
-    animation:p-cook__b 0.8s linear infinite alternate;
-    transform-origin: 50% 50%;
-  }
-  
-  @keyframes p-cook__b{
-    0% {margin-top: 0px; }
-    100%{transform:rotate(360deg);
-      margin-top: 40px;}
-  }
-  
-  
-  .p-cook__t{
-    animation:trouble .9s ease-in infinite alternate;
-    transform-origin:50% 50%;
-  }
-  
-  @keyframes trouble{
-    0%{transform:scale(0.5);}
-    100% {transform:scale(1.5);}
-  }
-  
-  .p-cook__t.trouble{
-    animation-delay:0.2s;
-  } 
-  /*==== 쇼핑 ====*/
-  .shop__s {
-    animation:p-my__st 5s linear infinite alternate running
-    }
-    
-  @keyframes p-my__st{
-      0%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} 
-      40%{transform:translate(150px, 20px) scale(1,1) rotate(180deg);} 
-      70%{transform:translate(50px,70px) scale(0.7,0.7) rotate(270deg);} 
-      100%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} }
-    
-    
-  .shop__t {
-    animation:p-my__ts 5s linear infinite alternate running
-    }
-    
-  @keyframes p-my__ts {
-      0%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} 
-      40%{transform:translate(20px, 150px) scale(1,1) rotate(180deg);} 
-      70%{transform:translate(70px,50px) scale(0.7,0.7) rotate(270deg);} 
-      100%{transform:translate(0,0) scale(0.3,0.3) rotate(0deg);} }
-    
+  animation-name: wire;
+  animation-duration: 4000s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
 
-  /*==== 커뮤 ====*/
-  .commu_ani{
-    animation:commu_ani 5s linear infinite alternate running;
-  }
-  
-  @keyframes commu_ani{
-    0% {transform:translatex(0%);}
-    100%{transform:translatex(10%);}
-  }
-  
-  .commu_mo{
-    animation:commu_mo 5s linear infinite alternate running;
-  }
-  
-  @keyframes commu_mo{
-    0% {transform:translatex(10%);}
-    100%{transform:translatex(0%);}
-  }
-  
-  /*==== 마페 ====*/
-  .wal_arrrr {
-    animation: wal_arrrr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
-  
-  @keyframes wal_arrrr {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /*==== 고맙 ====*/
-  .sign-1{
-    position:absolute;
-    top:40%;
-    right:15%;
-    text-align:center;
-  }
-  
-  .sign-1 svg path {
-    fill: rgba(255, 255, 255, 0);
-    stroke: var(--black);
-    stroke-width: 3;
-    stroke-dasharray: 1000;
-    animation-name: dash-ani-1;
-    animation-duration: 3s;
-    animation-play-state: paused;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-  }
-  
-  .sign-1.aos-animate svg path {
-    animation-play-state: running;
-  }
-  
-  @keyframes dash-ani-1 {
-    0% {
-      stroke-dashoffset: 1000;
-      stroke: rgba(64,64,64,0);
-    }
-  
-    5% {
-      stroke: rgba(64,64,64,1);
-    }
-  
-    95% {
-      stroke-dashoffset: 0;
-      stroke: rgba(64,64,64,1);
-    }
-  
-    100% {
-      stroke: rgba(64,64,64,0);
-    }
-  }
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #fcc21b #ffffff;
+@keyframes wire {
+  0% {
+    background-position: center;
   }
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
+  100% {
+    background-position: -8000% center;
+  }
+}
+
+/*==== 레시피&검색 ====*/
+.p-cook__s {
+  animation: p-cook__s 2s linear infinite alternate;
+}
+
+@keyframes p-cook__s {
+  0% {
+    transform: rotate(0deg) translate(0, 80px);
   }
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
+  100% {
+    transform: rotate(120deg) translate(50px, 0px);
+  }
+}
+
+.p-cook__s.ster-1 {
+  animation-delay: 0.2s;
+}
+
+.p-cook__star {
+  animation: rotate_s 2s linear infinite alternate;
+}
+
+@keyframes rotate_s {
+  0% {
+    transform: rotate(120deg) translate(50px, 0px);
   }
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #fcc21b;
-    border-radius: 10px;
-    border: 3px outset #ffffff;
+  100% {
+    transform: rotate(0deg) translate(0px, 80px);
+  }
+}
+
+.p-cook__star.ster-1 {
+  animation-delay: 0.3s;
+}
+
+.p-cook__b {
+  animation: p-cook__b 0.8s linear infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+@keyframes p-cook__b {
+  0% {
+    margin-top: 0px;
   }
 
-  /*==== 로딩화면 ====*/
-  .container.load {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 90%;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+  100% {
+    transform: rotate(360deg);
+    margin-top: 40px;
   }
-  
-  .centerChildren{ 
-    display: flex ;
-    justify-content: center;
-    align-items: center;
-    }
-
-  .type8 {
-    min-width: 33%;
-    --size: 80px;
-    --ballSize: var(--size)/5;
-    position: relative;
-  }
-  
-  .container>* {
-    border-radius: 50%;
-    width: var(--ballSize);
-    height: var(--ballSize);
-    margin-right: 5px;
-  }
-    
-      
-  .ball1 {
-    background-color: var(--green);
-    animation: jump var(--animation-speed) + s var(--interval) * 0 + s ease infinite;
-  }
-  .ball2 {
-    background-color: var(--orange);
-    animation: jump var(--animation-speed) + s var(--interval) * 1 + s ease infinite;
-  }
-  .ball3 {
-    background-color: var(--blue);
-    animation: jump var(--animation-speed) + s var(--interval) * 2 + s ease infinite;
-  }
-  .ball4 {
-    background-color: var(--black);
-    animation: jump var(--animation-speed) + s var(--interval) * 3 + s ease infinite;
-  }
-  @keyframes jump {
-    30% { margin-bottom: var(--ballSize) * 3; }
-    35% { margin-bottom: var(--ballSize) * 3; }
-    65% { margin-bottom: 0; }
-    to { margin-bottom: 0; }
-  }
+}
 
 
-  .loading {
-    animation: loading 3s linear 0s infinite normal;
-    color: ver(--green);
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 45px;
+.p-cook__t {
+  animation: trouble .9s ease-in infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+@keyframes trouble {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.p-cook__t.trouble {
+  animation-delay: 0.2s;
+}
+
+/*==== 쇼핑 ====*/
+.shop__s {
+  animation: p-my__st 5s linear infinite alternate running
+}
+
+@keyframes p-my__st {
+  0% {
+    transform: translate(0, 0) scale(0.3, 0.3) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(150px, 20px) scale(1, 1) rotate(180deg);
+  }
+
+  70% {
+    transform: translate(50px, 70px) scale(0.7, 0.7) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.3, 0.3) rotate(0deg);
+  }
+}
+
+
+.shop__t {
+  animation: p-my__ts 5s linear infinite alternate running
+}
+
+@keyframes p-my__ts {
+  0% {
+    transform: translate(0, 0) scale(0.3, 0.3) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(20px, 150px) scale(1, 1) rotate(180deg);
+  }
+
+  70% {
+    transform: translate(70px, 50px) scale(0.7, 0.7) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.3, 0.3) rotate(0deg);
+  }
+}
+
+
+/*==== 커뮤 ====*/
+.commu_ani {
+  animation: commu_ani 5s linear infinite alternate running;
+}
+
+@keyframes commu_ani {
+  0% {
+    transform: translatex(0%);
+  }
+
+  100% {
+    transform: translatex(10%);
+  }
+}
+
+.commu_mo {
+  animation: commu_mo 5s linear infinite alternate running;
+}
+
+@keyframes commu_mo {
+  0% {
+    transform: translatex(10%);
+  }
+
+  100% {
+    transform: translatex(0%);
+  }
+}
+
+/*==== 마페 ====*/
+.wal_arrrr {
+  animation: wal_arrrr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes wal_arrrr {
+  0% {
+    transform: translateY(-50px);
     opacity: 0;
-    position: absolute;
-    align-items: center;
-    text-transform: uppercase;
-    bottom:45%;
-    width: 100px;
-  } 
-
-  .loading::after {
-  content:"Loading..";
   }
 
-  @keyframes loading {
-    0%  {opacity: 0}
-    20% {opacity: 0}
-    50% {opacity: 1}
-    100%{opacity: 0}
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
+
+/*==== 고맙 ====*/
+.sign-1 {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  text-align: center;
+}
+
+.sign-1 svg path {
+  fill: rgba(255, 255, 255, 0);
+  stroke: var(--black);
+  stroke-width: 3;
+  stroke-dasharray: 1000;
+  animation-name: dash-ani-1;
+  animation-duration: 3s;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.sign-1.aos-animate svg path {
+  animation-play-state: running;
+}
+
+@keyframes dash-ani-1 {
+  0% {
+    stroke-dashoffset: 1000;
+    stroke: rgba(64, 64, 64, 0);
+  }
+
+  5% {
+    stroke: rgba(64, 64, 64, 1);
+  }
+
+  95% {
+    stroke-dashoffset: 0;
+    stroke: rgba(64, 64, 64, 1);
+  }
+
+  100% {
+    stroke: rgba(64, 64, 64, 0);
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #fcc21b #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fcc21b;
+  border-radius: 10px;
+  border: 3px outset #ffffff;
+}
+
+/*==== 로딩화면 ====*/
+.loading-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F1FA;
+  z-index: 11;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.loading-box.hide {
+  opacity: 0;
+  visibility: hidden;
+}
