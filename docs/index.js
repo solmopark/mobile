@@ -1,7 +1,7 @@
 console.clear();
 
 $('body').imagesLoaded(function() {
-  $('.loading').remove();
+  $('.container').remove();
   AOS.init();
 });
 

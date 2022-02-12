@@ -20,6 +20,16 @@ html {
   html > body .scrollbar-thumb {
     background-color: rgba(150,150,150,0.5);
   }
+  /*==== 라이브러리 ====*/
+  :root{
+    --orange: #ffac32;
+    --green: #5a8d26;
+    --blue: #a5d8e5;
+    --black: #404040;
+    --white: #f3f5f8;
+    --animation-speed: 1.4;
+    --interval: var(--animation-speed)/4;
+  }
   /*==== 로고 ====*/
   .logo-move{
     animation:logo_move .7s linear 0s infinite alternate;;
@@ -38,12 +48,12 @@ html {
   }
   
   .back-story__t.t1{
-    color:#FFD046;
+    color:var(--orange);
     
   }
   
   .back-story__t.t2{
-    color:#404040;
+    color:var(--black);
     
   }
   
@@ -70,7 +80,7 @@ html {
   }
   
   .wireframe__text{
-    color:#404040;
+    color:var(--black);
     letter-spacing:-0.4px;
     opacity:60%;
   }
@@ -129,7 +139,7 @@ html {
   }
   
   @keyframes p-cook__b{
-     0% {margin-top: 0px; }
+    0% {margin-top: 0px; }
     100%{transform:rotate(360deg);
       margin-top: 40px;}
   }
@@ -174,7 +184,6 @@ html {
   /*==== 커뮤 ====*/
   .commu_ani{
     animation:commu_ani 5s linear infinite alternate running;
-   
   }
   
   @keyframes commu_ani{
@@ -184,7 +193,6 @@ html {
   
   .commu_mo{
     animation:commu_mo 5s linear infinite alternate running;
-   
   }
   
   @keyframes commu_mo{
@@ -194,7 +202,7 @@ html {
   
   /*==== 마페 ====*/
   .wal_arrrr {
-      animation: wal_arrrr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: wal_arrrr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
   
   @keyframes wal_arrrr {
@@ -208,7 +216,7 @@ html {
     }
   }
   
- /*==== 고맙 ====*/
+  /*==== 고맙 ====*/
   .sign-1{
     position:absolute;
     top:40%;
@@ -218,7 +226,7 @@ html {
   
   .sign-1 svg path {
     fill: rgba(255, 255, 255, 0);
-    stroke: #404040;
+    stroke: var(--black);
     stroke-width: 3;
     stroke-dasharray: 1000;
     animation-name: dash-ani-1;
@@ -271,4 +279,86 @@ html {
     background-color: #fcc21b;
     border-radius: 10px;
     border: 3px outset #ffffff;
+  }
+
+  /*==== 로딩화면 ====*/
+  .container.load {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  
+  .centerChildren{ 
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    }
+
+  .type8 {
+    min-width: 33%;
+    --size: 80px;
+    --ballSize: var(--size)/5;
+    position: relative;
+  }
+  
+  .container>* {
+    border-radius: 50%;
+    width: var(--ballSize);
+    height: var(--ballSize);
+    margin-right: 5px;
+  }
+    
+      
+  .ball1 {
+    background-color: var(--green);
+    animation: jump var(--animation-speed) + s var(--interval) * 0 + s ease infinite;
+  }
+  .ball2 {
+    background-color: var(--orange);
+    animation: jump var(--animation-speed) + s var(--interval) * 1 + s ease infinite;
+  }
+  .ball3 {
+    background-color: var(--blue);
+    animation: jump var(--animation-speed) + s var(--interval) * 2 + s ease infinite;
+  }
+  .ball4 {
+    background-color: var(--black);
+    animation: jump var(--animation-speed) + s var(--interval) * 3 + s ease infinite;
+  }
+  @keyframes jump {
+    30% { margin-bottom: var(--ballSize) * 3; }
+    35% { margin-bottom: var(--ballSize) * 3; }
+    65% { margin-bottom: 0; }
+    to { margin-bottom: 0; }
+  }
+
+
+  .loading {
+    animation: loading 3s linear 0s infinite normal;
+    color: ver(--green);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 45px;
+    opacity: 0;
+    position: absolute;
+    align-items: center;
+    text-transform: uppercase;
+    bottom:45%;
+    width: 100px;
+  } 
+
+  .loading::after {
+  content:"Loading..";
+  }
+
+  @keyframes loading {
+    0%  {opacity: 0}
+    20% {opacity: 0}
+    50% {opacity: 1}
+    100%{opacity: 0}
   }
