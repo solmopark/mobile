@@ -24,17 +24,6 @@ html>body .scrollbar-thumb {
   background-color: rgba(150, 150, 150, 0.5);
 }
 
-/*==== 라이브러리 ====*/
-:root {
-  --orange: #ffac32;
-  --green: #5a8d26;
-  --blue: #a5d8e5;
-  --black: #404040;
-  --white: #f3f5f8;
-  --animation-speed: 1.4;
-  --interval: var(--animation-speed)/4;
-}
-
 /*==== 로고 ====*/
 .logo-move {
   animation: logo_move .7s linear 0s infinite alternate;
@@ -59,12 +48,12 @@ html>body .scrollbar-thumb {
 }
 
 .back-story__t.t1 {
-  color: var(--orange);
+  color: #fcc21b;
 
 }
 
 .back-story__t.t2 {
-  color: var(--black);
+  color: #404040;
 
 }
 
@@ -92,7 +81,7 @@ html>body .scrollbar-thumb {
 }
 
 .wireframe__text {
-  color: var(--black);
+  color: #404040;
   letter-spacing: -0.4px;
   opacity: 60%;
 }
@@ -300,7 +289,7 @@ html>body .scrollbar-thumb {
 
 .sign-1 svg path {
   fill: rgba(255, 255, 255, 0);
-  stroke: var(--black);
+  stroke: #404040;
   stroke-width: 3;
   stroke-dasharray: 1000;
   animation-name: dash-ani-1;
